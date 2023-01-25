@@ -1,0 +1,114 @@
+`timescale 1ns / 1ps
+
+//////////////////////////////////////////////////////////////////////////////////
+// Sabanci University CS303 Term Project
+// Elevator Control System
+// ------------------------------------- 
+// Engineers: Berna Yildiran & Taha Can Karaman
+//////////////////////////////////////////////////////////////////////////////////
+
+// CLK_DIVIDER
+// DEBOUNCER
+// SSD - SEVEN SEGMENT DISPLAY
+// ELEVATOR
+
+
+module top_module(
+input clk,
+rst,
+
+floor_0_p,
+floor_1_p,
+floor_2_p,
+floor_3_p,
+floor_4_p,
+
+direction_1,
+direction_2,
+direction_3,
+
+floor_0_d,
+floor_1_d,
+floor_2_d,
+floor_3_d,
+floor_4_d,
+
+output led_inside_0,
+led_inside_1,
+led_inside_2,
+led_inside_3,
+led_inside_4,
+
+led_outside_0,
+led_outside_1,
+led_outside_2,
+led_outside_3,
+led_outside_4,
+
+led_busy,
+
+[7:0]an,
+
+[0:0]a_out,
+b_out,
+c_out,
+d_out,
+e_out,
+f_out,
+g_out,
+p_out
+);
+    
+wire [7:0] a,b,c,d,e,f,g,p;
+
+clk_divider divider(.clk_in(clk), .rst(rst), .divided_clk(clk50hz));
+
+debouncer db0(.clk(clk50hz), .rst(rst), .noisy_in(floor_0_p), .clean_out(floor_0_p_clean));
+debouncer db1(.clk(clk50hz), .rst(rst), .noisy_in(floor_1_p), .clean_out(floor_1_p_clean));
+debouncer db2(.clk(clk50hz), .rst(rst), .noisy_in(floor_2_p), .clean_out(floor_2_p_clean));
+debouncer db3(.clk(clk50hz), .rst(rst), .noisy_in(floor_3_p), .clean_out(floor_3_p_clean));
+debouncer db4(.clk(clk50hz), .rst(rst), .noisy_in(floor_4_p), .clean_out(floor_4_p_clean));
+
+ssd sevenSegmentDisplay(
+clk,rst,
+a,b,c,d,e,f,g,p,
+a_out,b_out,c_out,d_out,e_out,f_out,g_out,p_out,
+an
+);
+
+elevator myElevator(
+clk50hz,rst,
+floor_0_p_clean,
+floor_1_p_clean,
+floor_2_p_clean,
+floor_3_p_clean,
+floor_4_p_clean,
+
+direction_1,
+direction_2,
+direction_3,
+
+floor_0_d,
+floor_1_d,
+floor_2_d,
+floor_3_d,
+floor_4_d,
+
+led_inside_0,
+led_inside_1,
+led_inside_2,
+led_inside_3,
+led_inside_4,
+
+led_outside_0,
+led_outside_1,
+led_outside_2,
+led_outside_3,
+led_outside_4, 
+
+led_busy,
+
+a,b,c,d,e,f,g,p
+);
+
+endmodule
