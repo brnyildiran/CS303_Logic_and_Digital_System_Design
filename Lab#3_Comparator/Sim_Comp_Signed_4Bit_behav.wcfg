@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Sim_Comp_Signed_4Bit_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Sim_Comp_Signed_4Bit" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="166666666fs"></ZoomStartTime>
+      <ZoomEndTime time="1166666667fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/A3" type="logic">
+      <obj_property name="ElementShortName">A3</obj_property>
+      <obj_property name="ObjectShortName">A3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/A2" type="logic">
+      <obj_property name="ElementShortName">A2</obj_property>
+      <obj_property name="ObjectShortName">A2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/A1" type="logic">
+      <obj_property name="ElementShortName">A1</obj_property>
+      <obj_property name="ObjectShortName">A1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/A0" type="logic">
+      <obj_property name="ElementShortName">A0</obj_property>
+      <obj_property name="ObjectShortName">A0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/B3" type="logic">
+      <obj_property name="ElementShortName">B3</obj_property>
+      <obj_property name="ObjectShortName">B3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/B2" type="logic">
+      <obj_property name="ElementShortName">B2</obj_property>
+      <obj_property name="ObjectShortName">B2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/B1" type="logic">
+      <obj_property name="ElementShortName">B1</obj_property>
+      <obj_property name="ObjectShortName">B1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/B0" type="logic">
+      <obj_property name="ElementShortName">B0</obj_property>
+      <obj_property name="ObjectShortName">B0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/A_GREATER_B" type="logic">
+      <obj_property name="ElementShortName">A_GREATER_B</obj_property>
+      <obj_property name="ObjectShortName">A_GREATER_B</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/A_LESS_B" type="logic">
+      <obj_property name="ElementShortName">A_LESS_B</obj_property>
+      <obj_property name="ObjectShortName">A_LESS_B</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Sim_Comp_Signed_4Bit/A_EQUAL_B" type="logic">
+      <obj_property name="ElementShortName">A_EQUAL_B</obj_property>
+      <obj_property name="ObjectShortName">A_EQUAL_B</obj_property>
+   </wvobject>
+</wave_config>
